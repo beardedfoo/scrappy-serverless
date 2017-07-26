@@ -1,7 +1,9 @@
 version: '2'
 services:
   http:
+    container_name: &app_name
+        scrappy-serverless
     build: .
-    image: scrappy-serverless
+    image: *app_name
     ports:
      - "8000:80"
