@@ -1,5 +1,5 @@
-# pylint: disable=invalid-name
 """A basic HTTP server in Python"""
+# pylint: disable=invalid-name,unused-import
 from flask import Flask, Response, request
 
 app = Flask(__name__)
