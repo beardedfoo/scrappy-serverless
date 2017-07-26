@@ -6,6 +6,8 @@ app = Flask(__name__)
 
 # PLAN: Connect to docker & test connection (docker info)
 
+# PLAN: Serve shim.py, the code which runs in function containers
+
 @app.route('/healthz')
 def healthz():
     """Reports service health"""
