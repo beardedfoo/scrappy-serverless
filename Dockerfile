@@ -5,7 +5,6 @@ RUN pip install docker==2.4.2
 
 # Pylint stage
 FROM base as pylint
-RUN apk --no-cache add py2-pip
 RUN pip install pylint
 COPY server.py server.py
 RUN pylint server.py
