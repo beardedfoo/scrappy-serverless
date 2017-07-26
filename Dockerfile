@@ -1,11 +1,13 @@
 # Deps base
 FROM alpine as base
 RUN apk --no-cache add python2 uwsgi uwsgi-python py2-flask curl py2-pip
-RUN pip install docker==2.4.2
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 # Pylint stage
 FROM base as pylint
-RUN pip install pylint
+COPY requirements-pylint.txt requirements-pylint.txt
+RUN pip install -r requirements-pylint.txt
 COPY server.py server.py
 RUN pylint server.py
 COPY shim.py shim.py
