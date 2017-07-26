@@ -1,9 +1,13 @@
 version: '2'
+networks:
+    scrappy-serverless:
+        driver: bridge
 services:
-  http:
-    container_name: &app_name
-        scrappy-serverless
-    build: .
-    image: *app_name
-    ports:
-     - "8000:80"
+    http:
+        container_name: scrappy-serverless
+        build: .
+        image: scrappy-serverless
+        ports:
+          - "8000:80"
+        networks:
+          - scrappy-serverless
