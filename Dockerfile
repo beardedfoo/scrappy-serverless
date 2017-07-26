@@ -1,6 +1,7 @@
 # Deps base
 FROM alpine as base
-RUN apk --no-cache add python2 uwsgi uwsgi-python py2-flask curl
+RUN apk --no-cache add python2 uwsgi uwsgi-python py2-flask curl py2-pip
+RUN pip install docker
 
 # Pylint stage
 FROM base as pylint
