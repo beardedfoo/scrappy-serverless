@@ -1,0 +1,7 @@
+version: '2'
+services:
+  http:
+    build: .
+    image: scrappy-serverless
+    ports:
+     - "8000:80"
