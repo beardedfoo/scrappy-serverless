@@ -8,6 +8,8 @@ FROM base as pylint
 RUN pip install pylint
 COPY server.py server.py
 RUN pylint server.py
+COPY shim.py shim.py
+RUN pylint shim.py
 
 # Build stage
 FROM base
