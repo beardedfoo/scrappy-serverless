@@ -4,6 +4,7 @@ chardet==3.0.4
 click==6.7
 docker==2.4.2
 docker-pycreds==0.2.1
+dotobject==1.2.1
 Flask==0.12.2
 idna==2.5
 ipaddress==1.0.18
@@ -11,6 +12,7 @@ itsdangerous==0.24
 Jinja2==2.9.6
 MarkupSafe==1.0
 redis==2.10.5
+redisworks==0.2.7
 requests==2.18.2
 rq==0.8.0
 six==1.10.0

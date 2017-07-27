@@ -7,6 +7,7 @@ click==6.7
 configparser==3.5.0
 docker==2.4.2
 docker-pycreds==0.2.1
+dotobject==1.2.1
 enum34==1.1.6
 Flask==0.12.2
 idna==2.5
@@ -19,6 +20,7 @@ MarkupSafe==1.0
 mccabe==0.6.1
 pylint==1.7.2
 redis==2.10.5
+redisworks==0.2.7
 requests==2.18.2
 rq==0.8.0
 singledispatch==3.4.0.3
