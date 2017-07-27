@@ -14,3 +14,7 @@ services:
   http:
     build: .
     image: scrappy-serverless
+    links:
+    - redis
+  redis:
+    image: redis:4.0.1
