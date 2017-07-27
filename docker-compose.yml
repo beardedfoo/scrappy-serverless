@@ -1,13 +1,16 @@
 version: '2'
 networks:
-    scrappy-serverless:
-        driver: bridge
+  scrappy-serverless:
+    driver: bridge
 services:
-    http:
-        container_name: scrappy-serverless
-        build: .
-        image: scrappy-serverless
-        ports:
-          - "8000:80"
-        networks:
-          - scrappy-serverless
+  lb:
+    image: dockercloud/haproxy:1.6.7
+    ports:
+    - 8000:80
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+    links:
+    - http
+  http:
+    build: .
+    image: scrappy-serverless
