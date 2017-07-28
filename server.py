@@ -4,7 +4,9 @@ from flask import Flask, Response, request
 
 app = Flask(__name__)
 
-# PLAN: Connect to docker & test connection (docker info)
+# PLAN: Connect to docker & test connection (.info)
+
+# PLAN: Connect to redis & test connection (.info)
 
 @app.route('/healthz')
 def healthz():
