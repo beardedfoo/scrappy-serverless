@@ -1,6 +1,6 @@
 # Deps base
 FROM alpine:3.6 as base
-RUN apk --no-cache add python2 uwsgi uwsgi-python curl py2-pip
+RUN apk --no-cache add python2 uwsgi uwsgi-python curl py2-pip docker
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
@@ -14,6 +14,7 @@ RUN pylint server.py
 # Build stage
 FROM base
 COPY server.py server.py
+COPY example.py example.py
 EXPOSE 80
 HEALTHCHECK CMD ["curl", "-f", "http://localhost/healthz"]
 CMD ["uwsgi", "--http-socket", "0.0.0.0:80", "--plugin", "python", \
