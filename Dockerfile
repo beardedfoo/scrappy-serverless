@@ -16,6 +16,5 @@ FROM base
 COPY server.py server.py
 COPY example.py example.py
 EXPOSE 80
-HEALTHCHECK CMD ["curl", "-f", "http://localhost/healthz"]
 CMD ["uwsgi", "--http-socket", "0.0.0.0:80", "--plugin", "python", \
      "--manage-script-name", "--mount", "/=server:app"]
