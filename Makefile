@@ -12,7 +12,7 @@ down:
 	docker-compose down
 
 shell:
-	docker run --rm --net scrappyserverless_default -it scrappy-serverless /bin/sh
+	docker run --rm --net scrappyserverless_default -v /var/run/docker.sock:/var/run/docker.sock -it scrappy-serverless /bin/sh
 
 dev:
 	watchexec --restart make
