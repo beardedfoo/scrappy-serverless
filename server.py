@@ -1,4 +1,4 @@
-# pylint: disable=invalid-name,unused-import,missing-docstring,wrong-import-order,line-too-long
+# pylint: disable=invalid-name,unused-import,missing-docstring,wrong-import-order,line-too-long,trailing-whitespace
 """A basic FaaS in Python"""
 from __future__ import print_function
 from flask import Flask, Response, request
