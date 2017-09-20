@@ -1,6 +1,6 @@
 # Deps base
 FROM alpine:3.6 as base
-RUN apk --no-cache add python2=2.7.13-r1 uwsgi=2.0.14-r9 uwsgi-python=2.0.14-r9 curl=7.54.0-r0 py2-pip=9.0.1-r1
+RUN apk --no-cache add python2 uwsgi uwsgi-python curl py2-pip
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
