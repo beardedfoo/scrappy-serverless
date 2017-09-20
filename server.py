@@ -6,8 +6,6 @@ from redis import Redis
 
 app = Flask(__name__)
 
-# PLAN: Connect to docker & test connection (.info)
-
 # Connect to redis & test connection
 redis_conn = Redis('redis')
 redis_conn.info()
