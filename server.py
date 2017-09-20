@@ -1,4 +1,4 @@
-# pylint: disable=invalid-name,unused-import,missing-docstring
+# pylint: disable=invalid-name,unused-import,missing-docstring,wrong-import-order
 """A basic FaaS in Python"""
 from flask import Flask, Response, request
 
