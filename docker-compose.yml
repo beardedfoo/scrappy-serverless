@@ -1,15 +1,6 @@
 version: '2'
 services:
-  lb:
-    container_name: serverless
-    image: dockercloud/haproxy:1.6.7
-    ports:
-    - 8000:80
-    volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-    links:
-    - backend
-  backend:
+  serverless:
     build: .
     image: scrappy-serverless
     links:
