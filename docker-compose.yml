@@ -14,5 +14,7 @@ services:
     image: scrappy-serverless
     links:
     - redis
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
   redis:
     image: redis:4.0.1
