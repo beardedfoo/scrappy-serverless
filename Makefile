@@ -1,10 +1,18 @@
 default: docker-compose
 
-docker-compose: build-docker-compose run-docker-compose
-build-docker-compose:
+docker-compose: build up
+
+build:
 	docker-compose build --force-rm
-run-docker-compose:
+
+up:
 	docker-compose up
+
+down:
+	docker-compose down
+
+shell:
+	docker run --rm --net scrappyserverless_default -it scrappy-serverless /bin/sh
 
 dev:
 	watchexec --restart make
