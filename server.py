@@ -1,5 +1,6 @@
 # pylint: disable=invalid-name,unused-import,missing-docstring,wrong-import-order
 """A basic FaaS in Python"""
+from __future__ import print_function
 from flask import Flask, Response, request
 from redis import Redis
 
