@@ -1,2 +1,2 @@
 # scrappy-serverless
-A basic FaaS, build for educational purposes.
+A basic FaaS, built for educational purposes.
