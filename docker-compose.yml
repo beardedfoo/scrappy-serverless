@@ -1,6 +1,7 @@
 version: '2'
 services:
-  serverless:
+  lb:
+    container_name: serverless
     image: dockercloud/haproxy:1.6.7
     ports:
     - 8000:80
