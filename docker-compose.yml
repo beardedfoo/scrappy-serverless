@@ -8,6 +8,10 @@ services:
     - redis
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
+    expose:
+      - 80
+    ports:
+      - 8000:80
   redis:
     container_name: redis
     image: beardedfoo/redis:4.0.1
