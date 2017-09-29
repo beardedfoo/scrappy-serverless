@@ -1,5 +1,5 @@
 # Deps base
-FROM alpine:3.6 as base
+FROM beardedfoo/alpine:3.6 as base
 RUN apk --no-cache add python2 uwsgi uwsgi-python curl py2-pip docker
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
