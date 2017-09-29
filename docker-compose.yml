@@ -1,6 +1,7 @@
 version: '2'
 services:
   serverless:
+    container_name: serverless
     build: .
     image: scrappy-serverless
     links:
@@ -8,4 +9,5 @@ services:
     volumes:
     - /var/run/docker.sock:/var/run/docker.sock
   redis:
+    container_name: redis
     image: redis:4.0.1
