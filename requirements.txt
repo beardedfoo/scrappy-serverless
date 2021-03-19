@@ -9,7 +9,7 @@ Flask==0.12.2
 idna==2.5
 ipaddress==1.0.18
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 MarkupSafe==1.0
 redis==2.10.5
 redisworks==0.2.7
